@@ -13,6 +13,9 @@ class Webpage(models.Model):
     name=models.CharField(max_length=100)
     url=models.URLField()
 
+def __str__(self):
+    return self.name
+
 class Access_Record(models.Model):
     name=models.ForeignKey(Webpage,on_delete=models.CASCADE)
     date=models.DateField(auto_now=True)
